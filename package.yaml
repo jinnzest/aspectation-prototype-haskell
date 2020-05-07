@@ -1,0 +1,115 @@
+name: aspectation-prototype
+version: 0.1.0.0
+github: githubuser/aspectation-prototype-haskell
+license: MIT
+license-file: LICENSE
+author: jinnzest
+maintainer: jinnzest@users.noreply.github.com
+copyright: 2022 jinnzest
+extra-source-files:
+- README.md
+- ChangeLog.md
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/aspectation-prototype-haskell#readme>
+default-extensions: OverloadedStrings , NamedFieldPuns, RecursiveDo, DeriveGeneric, TupleSections, PackageImports, FlexibleInstances, QuasiQuotes, DerivingVia
+dependencies:
+- base
+- lens
+- megaparsec
+- unordered-containers
+- text
+- mtl
+- ghc   
+- containers
+- directory
+- hashable
+- utf8-string
+library:
+    dependencies:
+        - llvm-hs >= 9.0.1 && < 9.0.2
+        - llvm-hs-pure >= 9.0.0 && < 9.0.1
+        - process
+        - raw-strings-qq
+        - monad-control
+        - basic-prelude
+        - bytestring
+        - cryptohash-sha256
+        - bytestring
+        - base16-bytestring
+        - mmorph
+        - ghc-prim
+        - sort
+        - aeson-qq
+        - aeson
+        - aeson-yaml
+        - deriving-aeson
+        - ilist
+    source-dirs:
+        - src
+        - src/codegen
+        - src/main
+        - src/aspects
+        - src/aspects/algorithmicComplexity
+        - src/aspects/memoryComplexity
+        - src/aspects/sideEffect
+        - src/aspects/functionDomain    
+        - src/aspects/functionDomain/directives
+        - src/aspects/functionDomain/analytics
+        - src/aspects/execFlow
+        - src/aspects/execFlow/analytics
+        - src/aspects/execFlow/directives
+        - src/aspects/valueSize
+        - src/aspects/valueSize/analytics
+        - src/aspects/memoryManagement
+        - src/aspects/memoryManagement/directives
+        - src/aspects/memoryManagement/analytics
+        - src/aspects/whenToRun
+        - src/aspects/description
+        - src/aspects/laziness
+        - src/aspects/dataTracing
+        - src/aspects/completeAbility
+    ghc-options:
+        - -j
+executables:
+    sds:
+        main: Main.hs
+        source-dirs: app
+        ghc-options:
+            # - -threaded
+            # - -with-rtsopts=-H128m -N
+            - -rtsopts
+            - -with-rtsopts=-H128m
+            - -j
+        dependencies:
+            - aspectation-prototype
+tests:
+    aspectation-prototype-test:
+        main: AllTests.hs
+        source-dirs: 
+        - test
+        - test/pure
+        - test/pure/aspects
+        - test/pure/aspects/execFlow
+        - test/pure/aspects/functionDomain      
+        - test/pure/aspects/memoryManagement     
+        - test/pure/aspects/valueSize
+        - test/pure/main
+        - test/io
+        - test/io/ir
+        ghc-options:
+            - -rtsopts
+            - -with-rtsopts=-H128m
+            - -j
+        dependencies:
+        - aspectation-prototype
+        - tasty
+        - tasty-hunit
+        - tasty-quickcheck
+        - quickcheck-instances
+
+extra-libraries:     [tommath]

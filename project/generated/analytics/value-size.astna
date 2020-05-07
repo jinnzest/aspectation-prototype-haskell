@@ -1,0 +1,31 @@
+main ~ 
+|	1 single2 4 single1 5
+	1 single1 a ~ a= 8 bits -> pointer
+	1 single2 b c ~ b= 8 bits, c= pointer
+print v ~ v= pointer
+print v ~ v= 64 bits
+print v ~ v= 32 bits
+print v ~ v= 16 bits
+print v ~ v= 8 bits
+print v ~ v= 1 bit
+print_num6 ~ 
+	1 print v ~ v= 8 bits
+print_num7 ~ 
+	1 print v ~ v= 8 bits
+retval -> r ~ r= 8 bits
+single1 a -> r ~ a= pointer, r= pointer
+	1 print v ~ v= pointer
+	2 print v ~ v= pointer
+	3 print v ~ v= pointer
+single2 b c ~ b= pointer, c= pointer
+	1 print v ~ v= 1 bit
+	2 print v ~ v= 8 bits
+|	3 print retval
+	3 retval  ~  -> 8 bits
+	3 print v ~ v= 8 bits
+	4 print v ~ v= pointer
+	5 print v ~ v= pointer
+	6 print_num6  ~ 
+	7 print_num7  ~ 
+single3 a -> r ~ a= pointer
+	1 single1 a ~ a= pointer -> pointer

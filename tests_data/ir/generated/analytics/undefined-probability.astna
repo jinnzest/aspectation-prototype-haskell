@@ -1,0 +1,30 @@
+main ~ 
+|	1 single2 4 single1 5
+	1 a <- single1 a ~ maybe will be called ; a = maybe defined
+	1 single2 b c ~ maybe will be called
+
+print v ~ 
+
+print_num6 ~ 
+	1 print v ~ maybe will be called
+
+print_num7 ~ 
+	1 print v ~ maybe will be called
+
+retval -> r ~ r= defined
+|	1 3
+
+single1 a -> r ~ r= defined
+	1 print v ~ will be called
+|	2 a
+
+single2 b c ~ 
+	1 print v ~ maybe will be called
+	2 print v ~ maybe will be called
+|	3 print retval
+	3 print v ~ will be called
+	3 a <- retval ~ will be called ; a = defined
+	4 print v ~ will be called
+	5 print v ~ will be called
+	6 print_num6 ~ will be called
+	7 print_num7 ~ will be called

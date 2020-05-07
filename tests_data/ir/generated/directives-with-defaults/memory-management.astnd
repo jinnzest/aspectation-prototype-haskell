@@ -1,0 +1,17 @@
+main ~ 
+	1 single2 v v ~ v = here, v = here
+print_num6 ~ 
+	1 print v ~ v = here
+print_num7 ~ 
+	1 print v ~ v = here
+retval -> r ~ r = here
+single1 a -> r ~ 
+	1 print v ~ v = here
+single2 b c ~ 
+	1 print v ~ v = here
+	2 print v ~ v = here
+	3 print v ~ v = here
+	4 print v ~ v = here
+	5 print v ~ v = here
+|	6 print_num6
+|	7 print_num7

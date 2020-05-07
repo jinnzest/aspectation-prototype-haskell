@@ -1,0 +1,19 @@
+main ~ 
+
+print_num6 ~ 
+
+print_num7 ~ 
+
+retval -> r ~ 
+	alloc 3
+	1 3
+single1 a -> r ~ 
+
+
+single2 b c ~ 
+
+
+
+
+
+

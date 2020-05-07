@@ -1,0 +1,22 @@
+
+fn single1 a  = 
+    print a
+    a
+
+fn retval = 3
+
+fn print_num6=print 6
+
+fn print_num7 = 
+    print 7
+
+fn main = single2 4 single1 5 
+
+fn single2 b c =
+    print 1
+    print 2
+    print retval 
+    print b
+    print c
+    print_num6
+    print_num7

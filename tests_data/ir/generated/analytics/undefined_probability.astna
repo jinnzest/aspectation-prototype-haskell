@@ -1,0 +1,24 @@
+main ~ 
+	1 single2 = maybe defined,single1 = maybe defined
+
+print v ~ 
+
+print_num6 ~ 
+	1 print = maybe defined
+
+print_num7 ~ 
+	1 print = maybe defined
+
+retval -> r ~ result = defined
+
+single1 a -> r ~ result = defined
+	1 print a = defined
+
+single2 b c ~ 
+	1 print b c = maybe defined
+	2 print b c = maybe defined
+	3 print b c = defined,retval b c = defined
+	4 print b c = defined
+	5 print b c = defined
+	6 print_num6 b c = defined
+	7 print_num7 b c = defined

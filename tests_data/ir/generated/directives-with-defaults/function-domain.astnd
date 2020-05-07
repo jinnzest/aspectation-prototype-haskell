@@ -1,0 +1,7 @@
+main ~ 
+print v ~ -inf<=v<=inf
+print_num6 ~ 
+print_num7 ~ 
+retval -> r ~ -inf<=r<=inf
+single1 a -> r ~ -inf<=a<=inf, -inf<=r<=inf
+single2 b c ~ -inf<=b<=inf, -inf<=c<=inf

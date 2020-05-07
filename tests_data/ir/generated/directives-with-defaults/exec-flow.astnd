@@ -1,0 +1,7 @@
+main ~ pub
+print v ~ priv
+print_num6 ~ priv
+print_num7 ~ priv
+retval -> r ~ priv
+single1 a -> r ~ priv
+single2 b c ~ priv

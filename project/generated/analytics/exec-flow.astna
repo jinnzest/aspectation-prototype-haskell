@@ -1,0 +1,6 @@
+main ~ 
+	single1 a -> r, print v
+	single2 b c, print v
+	single2 b c, print_num6, print v
+	single2 b c, print_num7, print v
+	single2 b c, retval -> r

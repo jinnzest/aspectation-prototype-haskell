@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: "./app"
+      component: "aspectation-prototype:exe:sds"
+    - path: "./test"
+      component: "aspectation-prototype:test:aspectation-prototype-test"      
+    - path: "./src"  
+      component: "aspectation-prototype:lib"
